@@ -1,3 +1,6 @@
+#ifndef REF_H
+#define REF_H
+
 #include "Human.h"
 #include "Computer.h"
 
@@ -12,4 +15,6 @@ class Referee {
         char refGame(Human player1, Computer player2);
 
 };
+
+#endif
 

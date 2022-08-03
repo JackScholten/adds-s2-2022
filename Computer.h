@@ -1,3 +1,6 @@
+#ifndef COMP_H
+#define COMP_H
+
 using namespace std;
 
 class Computer{
@@ -9,3 +12,5 @@ class Computer{
         char makeMove();
 
 };
+
+#endif

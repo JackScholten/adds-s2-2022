@@ -1,3 +1,6 @@
+#ifndef HUM_H
+#define HUM_H
+
 using namespace std;
 
 class Human{
@@ -9,3 +12,5 @@ class Human{
         char makeMove();
 
 };
+
+#endif 

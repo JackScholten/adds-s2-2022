@@ -1,6 +1,7 @@
 #include "Referee.h"
 
 
+
 using namespace std;
 
 Referee::Referee() { this->result = 'I'; }
