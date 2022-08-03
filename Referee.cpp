@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Referee::Referee() { this->result = 'I'; };
+Referee::Referee() { this->result = 'I'; }
 
 char Referee::refGame(Human player1, Computer player2) { 
 
@@ -27,4 +27,4 @@ if( (player1.move == 'R' && player2.move == 'P') ||
         return this->result; };
 
 return 'I';
-}; 
+}

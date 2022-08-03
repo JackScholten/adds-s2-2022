@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Human::Human() { this->move = 'I';  };
+Human::Human() { this->move = 'I';  }
 
 char Human::makeMove() { 
 
@@ -18,7 +18,7 @@ char Human::makeMove() {
         cout << "Make a different move: " << endl;
         cin >> this->move;
 
-    };
+    }
 
     return this->move;
-};
+}
