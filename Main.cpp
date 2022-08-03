@@ -14,4 +14,5 @@ Ref.refGame(player1, player2);
 
 cout << Ref.result << endl;
 
+return 0;
 };
