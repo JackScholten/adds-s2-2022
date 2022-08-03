@@ -13,7 +13,7 @@ char Human::MakeMove() {
 
     if(this->move != 'R' && this->move != 'P' && this->move != 'S') {
 
-        cout << "This move is not valid";
+        cout << "This move is not valid" << endl;
 
     };
 
