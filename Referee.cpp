@@ -2,12 +2,12 @@
 
 using namespace std;
 
-Referee::Referee() { this->result = 'M'; };
+Referee::Referee() { this->result = 'I'; };
 
-char Referee::RefGame(Human player1, Computer player2) { 
+char Referee::refGame(Human player1, Computer player2) { 
 
-player1.MakeMove();
-player2.MakeMove();
+player1.makeMove();
+player2.makeMove();
 
 if( (player1.move == 'R' && player2.move == 'R') || 
     (player1.move == 'S' && player2.move == 'S') ||

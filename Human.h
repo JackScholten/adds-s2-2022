@@ -6,6 +6,6 @@ class Human{
     
     public:
         Human();
-        char MakeMove();
+        char makeMove();
 
 };

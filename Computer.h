@@ -6,6 +6,6 @@ class Computer{
     
     public:
         Computer();
-        char MakeMove();
+        char makeMove();
 
 };

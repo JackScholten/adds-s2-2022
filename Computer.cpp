@@ -1,8 +1,8 @@
 #include "Computer.h"
 
-Computer::Computer() { this->move = 'M'; };
+Computer::Computer() { this->move = 'I'; };
 
-char Computer::MakeMove() { 
+char Computer::makeMove() { 
 
     this->move = 'R';
 

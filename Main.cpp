@@ -9,7 +9,7 @@ Human player1;
 Computer player2;
 Referee Ref;
 
-Ref.RefGame(player1, player2);
+Ref.refGame(player1, player2);
 
 cout << Ref.result << endl;
 

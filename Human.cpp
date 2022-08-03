@@ -3,11 +3,11 @@
 
 using namespace std;
 
-Human::Human() { this->move = 'M';  };
+Human::Human() { this->move = 'I';  };
 
-char Human::MakeMove() { 
+char Human::makeMove() { 
 
-    cout << "Make your move: " << endl;
+    cout << "Enter Move: " << endl;
     cin >> this->move;
 
     while(this->move != 'R' && this->move != 'P' && this->move != 'S') {
