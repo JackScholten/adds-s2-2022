@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "Human.h"
 #include "Computer.h"
 
@@ -9,6 +7,7 @@ class Referee {
     public:
         char result;
 
+    public:
         Referee();
         char RefGame(Human player1, Computer player2);
 

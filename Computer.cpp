@@ -1,7 +1,5 @@
 #include "Computer.h"
 
-
-
 Computer::Computer() { this->move = 'M'; };
 
 char Computer::MakeMove() { 
