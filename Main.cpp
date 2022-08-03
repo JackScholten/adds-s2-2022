@@ -1,5 +1,7 @@
 #include <iostream>
 #include "Referee.h"
+#include "Computer.h"
+#include "Human.h"
 
 using namespace std;
 
