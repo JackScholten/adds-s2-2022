@@ -1,5 +1,3 @@
-#include <iostream>
-#include <string>
 #include "Referee.h"
 
 
@@ -8,7 +6,7 @@ using namespace std;
 Referee::Referee() { this->result = 'M'; };
 
 char Referee::RefGame(Human player1, Computer player2) { 
-
+//need to do 
 if( (player1.move == 'R' && player2.move == 'R') || 
     (player1.move == 'S' && player2.move == 'S') ||
     (player1.move == 'P' && player2.move == 'P') ) {  
