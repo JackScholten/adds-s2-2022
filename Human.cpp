@@ -7,7 +7,7 @@ Human::Human() { this->move = 'I';  };
 
 char Human::makeMove() { 
 
-    cout << "Enter Move: " << endl;
+    cout << "Enter Move: ";
     cin >> this->move;
 
     while(this->move != 'R' && this->move != 'P' && this->move != 'S') {
