@@ -8,3 +8,9 @@ char Computer::makeMove() {
 
     return this->move;
 }
+
+char Computer::getMove() {
+
+    return move;
+    
+}

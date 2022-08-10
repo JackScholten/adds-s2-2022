@@ -1,18 +1,17 @@
-#ifndef REF_H
-#define REF_H
+#ifndef _Referee
+#define _Referee
 
 #include "Human.h"
 #include "Computer.h"
 
-using namespace std;
-
 class Referee {
-    public:
+    private:
         char result;
 
     public:
         Referee();
         char refGame(Human player1, Computer player2);
+        char getResult();
 
 };
 

@@ -1,16 +1,14 @@
-#ifndef COMP_H
-#define COMP_H
-
-using namespace std;
+#ifndef _Computer
+#define _Computer
 
 class Computer{
-    public:
+    private:
         char move;
     
     public:
         Computer();
         char makeMove();
-
+        char getMove();
 };
 
 #endif

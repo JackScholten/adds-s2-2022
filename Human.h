@@ -1,15 +1,14 @@
-#ifndef HUM_H
-#define HUM_H
-
-using namespace std;
+#ifndef _Human
+#define _Human
 
 class Human{
-    public:
+    private:
         char move;
     
     public:
         Human();
         char makeMove();
+        char getMove();
 
 };
 

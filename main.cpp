@@ -12,7 +12,7 @@ Referee Ref;
 
 Ref.refGame(player1, player2);
 
-cout << Ref.result << endl;
+cout << Ref.getResult() << endl;
 
 return 0;
 };

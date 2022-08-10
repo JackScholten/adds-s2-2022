@@ -22,3 +22,9 @@ char Human::makeMove() {
 
     return this->move;
 }
+
+char Human::getMove() {
+
+    return move;
+    
+}
