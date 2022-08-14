@@ -1,18 +1,17 @@
 #include <iostream>
-#include "Referee.h"
+#include "Player.h"
+#include "Avalanche.h"
 
 
 using namespace std;
 
 int main() {
 
-Human player1;
-Computer player2;
-Referee Ref;
+Avalanche a;
 
-Ref.refGame(player1, player2);
+a.makeMove();
 
-cout << Ref.getResult() << endl;
+cout << a.getMove() << endl;
 
 return 0;
 };
