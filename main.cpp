@@ -1,13 +1,15 @@
 #include <iostream>
 #include "Computer.h"
 #include "Avalanche.h"
+#include "Bureaucrat.h"
+#include "Toolbox.h"
 
 
 using namespace std;
 
 int main() {
 
-Avalanche a;
+Toolbox a;
 
 a.makeMove();
 
