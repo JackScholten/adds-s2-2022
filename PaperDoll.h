@@ -10,8 +10,6 @@ class PaperDoll : public Computer {
     public:
         PaperDoll();
         virtual void makeMove();
-        void setCounter(int a);
-        int getCounter();
 
 };
 
