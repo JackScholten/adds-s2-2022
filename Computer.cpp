@@ -2,15 +2,12 @@
 
 Computer::Computer() { this->move = 'I'; }
 
-char Computer::makeMove() { 
-
-    this->move = 'R';
-
-    return this->move;
-}
+void Computer::makeMove() { setMove('T'); }
 
 char Computer::getMove() {
 
-    return move;
-    
+return this->move;
+
 }
+
+void Computer::setMove(char a) { this->move = a; }

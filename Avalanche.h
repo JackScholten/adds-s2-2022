@@ -1,9 +1,9 @@
 #ifndef _Avalanche
 #define _Avalanche
 
-#include "Player.h"
+#include "Computer.h"
 
-class Avalanche : public Player {
+class Avalanche : public Computer {
     public:
         Avalanche();
         virtual void makeMove();

@@ -7,8 +7,9 @@ class Computer{
     
     public:
         Computer();
-        char makeMove();
-        char getMove();
-};
+        virtual void makeMove();
+        virtual char getMove();
+        virtual void setMove(char a);
 
+};
 #endif
