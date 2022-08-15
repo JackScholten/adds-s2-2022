@@ -4,24 +4,24 @@ using namespace std;
 
 Referee::Referee() { this->result = 'I'; }
 
-char Referee::refGame(Human player1, Computer player2) { 
+char Referee::refGame(Player * a, Player * b) { 
 
-player1.makeMove();
-player2.makeMove();
+a->makeMove();
+b->makeMove();
 
-if( player1.getMove() == player2.getMove() ) {  
+if( a->getMove() == b->getMove() ) {  
         this->result = 'T';
         return this->result; };
 
-if( (player1.getMove() == 'R' && player2.getMove() == 'S') || 
-    (player1.getMove() == 'S' && player2.getMove() == 'P') ||
-    (player1.getMove() == 'P' && player2.getMove() == 'R') ) {  
+if( (a->getMove() == 'R' && b->getMove() == 'S') || 
+    (a->getMove() == 'S' && b->getMove() == 'P') ||
+    (a->getMove() == 'P' && b->getMove() == 'R') ) {  
         this->result = 'W';
         return this->result; };
 
-if( (player1.getMove() == 'R' && player2.getMove() == 'P') || 
-    (player1.getMove() == 'S' && player2.getMove() == 'R') ||
-    (player1.getMove() == 'P' && player2.getMove() == 'S') ) {  
+if( (a->getMove() == 'R' && b->getMove() == 'P') || 
+    (a->getMove() == 'S' && b->getMove() == 'R') ||
+    (a->getMove() == 'P' && b->getMove() == 'S') ) {  
         this->result = 'L';
         return this->result; };
 

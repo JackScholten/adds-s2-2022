@@ -1,13 +1,15 @@
 #ifndef _Human
 #define _Human
 
-class Human{
+#include "Player.h"
+
+class Human : public Player {
     private:
-        char move;
-    
+        char store;
+
     public:
         Human();
-        char makeMove();
+        void makeMove();
         char getMove();
 
 };

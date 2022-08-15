@@ -1,15 +1,13 @@
 #ifndef _Computer
 #define _Computer
 
-class Computer{
-    private:
-        char move;
-    
+#include "Player.h"
+
+class Computer : public Player {
     public:
         Computer();
         virtual void makeMove();
-        virtual char getMove();
-        virtual void setMove(char a);
 
 };
+
 #endif

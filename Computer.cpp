@@ -1,13 +1,6 @@
 #include "Computer.h"
 
-Computer::Computer() { this->move = 'I'; }
+Computer::Computer() { setMove('I'); }
 
-void Computer::makeMove() { setMove('T'); }
+void Computer::makeMove() { setMove('R'); }
 
-char Computer::getMove() {
-
-return this->move;
-
-}
-
-void Computer::setMove(char a) { this->move = a; }

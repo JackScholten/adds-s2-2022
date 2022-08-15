@@ -1,19 +1,19 @@
 #include <iostream>
+#include "Human.h"
 #include "Computer.h"
 #include "Avalanche.h"
 #include "Bureaucrat.h"
 #include "Toolbox.h"
-
+#include "RandomComputer.h"
+#include "Crescendo.h"
+#include "PaperDoll.h"
+#include "FistfullODollars.h"
 
 using namespace std;
 
 int main() {
 
-Toolbox a;
 
-a.makeMove();
-
-cout << a.getMove() << endl;
 
 return 0;
 };
