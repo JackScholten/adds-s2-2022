@@ -13,8 +13,8 @@ class Library {
     public:
         Library();
 
-        void addDocument(array<Document *, 10> shelf, Document * a);
-        void hasDocument(array<Document *, 10> shelf);
+        void addDocument(std::array<Document *, 10> shelf, Document * a);
+        void hasDocument(std::array<Document *, 10> shelf);
 
         std::array<Document *, 10> getShelf();
 

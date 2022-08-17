@@ -23,7 +23,7 @@ void Library::hasDocument(array<Document *, 10> shelf) {
 
     } else {
 
-        cout << "The sheld is not empty" << endl;
+        cout << "The shelf is not empty" << endl;
 
     }
 

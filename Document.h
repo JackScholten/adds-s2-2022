@@ -8,7 +8,7 @@ class Document {
         int ID;
 
     public:
-        virtual int getDocumentID() =0;
+        virtual int getDocumentID() = 0;
 
     friend class Book;
 
