@@ -5,6 +5,7 @@
 
 class Book : public Document {
     public:
+        Book();
         Book(int _ID); 
         virtual int getDocumentID();
         
