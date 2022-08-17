@@ -4,11 +4,10 @@
 #include "Document.h"
 
 class Book : public Document {
-    private:
-
     public:
+        Book(int _ID); 
+        virtual int getDocumentID();
         
-
 };
 
 
