@@ -10,16 +10,13 @@ int main() {
 //create a library
 Library Uni;
 //create a book
-Document * p1;
-
-Book * p2 = new Book HarryPotter(123);
 
 //add book to library
-Library->addDocument(Uni.shelf, Book * p2);
+Library->addDocument(Uni.getShelf(), HarryPotter(123));
 
 //checks if book is in library 
 
-Library->hasDocument(Uni.shelf);
+Library->hasDocument(Uni.getShelf());
 
 
 

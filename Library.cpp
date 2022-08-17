@@ -30,3 +30,4 @@ void Library::hasDocument(array<Document *, 10> shelf) {
 }
 
 
+std::array<Document *, 10> Library::getShelf() { return this->shelf; };
