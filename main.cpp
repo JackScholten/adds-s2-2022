@@ -12,12 +12,12 @@ Library Uni;
 //create a book
 
 //add book to library
-Library->addDocument(Uni.getShelf(), HarryPotter(123));
+Uni.addDocument( Uni.getShelf(), new Book(123));
 
 //checks if book is in library 
 
-Library->hasDocument(Uni.getShelf());
+Uni.hasDocument(Uni.getShelf());
 
 
-
+return 0;
 }
