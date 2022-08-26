@@ -1,4 +1,5 @@
 #include "Reverse.h"
+#include <iostream>
 #include <string>
 #include <cmath>
 
@@ -7,6 +8,13 @@ using namespace std;
 Reverse::Reverse() {};
 
 int Reverse::reverseDigit(int value) {
+
+// Condition checking
+
+    if(value < 0) {
+        cout << "ERROR" << endl;
+        return 0;
+    }
 
 // Bade Condition
     if(value < 10) {

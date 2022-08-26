@@ -8,7 +8,7 @@ int main() {
 
 Reverse a;
 
-cout << a.reverseDigit(1000) << endl;
+a.reverseDigit(123);
 
 cout << a.reverseString("a") << endl;
 
