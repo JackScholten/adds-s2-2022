@@ -1,5 +1,6 @@
 #include "Reverse.h"
 #include "Truckloads.h"
+#include "EfficentTruckloads.h"
 #include <iostream>
 #include <string>
 
@@ -16,6 +17,10 @@ cout << a.reverseString("a") << endl;
 Truckloads b;
 
 cout << b.numTrucks(10 , 2) << endl;
+
+EfficentTruckloads c;
+
+cout << c.numTrucks(10,2) << endl;
 
 }
 
