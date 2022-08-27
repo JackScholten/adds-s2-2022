@@ -1,4 +1,4 @@
-#include "EfficentTruckloads.h"
+#include "EfficientTruckloads.h"
 
 #define MaxCrates 100
 #define MaxLoad 10
@@ -7,9 +7,9 @@
 
 using namespace std;
 
-EfficentTruckloads::EfficentTruckloads() {}
+EfficientTruckloads::EfficientTruckloads() {}
 
-int EfficentTruckloads::numTrucks(int numCrates, int loadSize) {
+int EfficientTruckloads::numTrucks(int numCrates, int loadSize) {
 
 static int trucks[MaxCrates][MaxLoad] = { };
 
