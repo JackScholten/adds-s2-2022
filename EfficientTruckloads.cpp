@@ -1,4 +1,5 @@
 #include "EfficientTruckloads.h"
+#include <iostream>
 
 #define MaxCrates 100000
 #define MaxLoad 1000
@@ -12,6 +13,13 @@ EfficientTruckloads::EfficientTruckloads() {}
 int EfficientTruckloads::numTrucks(int numCrates, int loadSize) {
 
 static int trucks[MaxCrates][MaxLoad] = { };
+
+// Condition Check
+
+if(numCrates <= 0) {
+        cout << "ERROR" << endl;
+        return 0;
+    }
 
 // Base case 
 
