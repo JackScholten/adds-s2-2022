@@ -13,7 +13,7 @@ int Reverse::reverseDigit(int value) {
 
     if(value < 0) {
         cout << "ERROR" << endl;
-        return 0;
+        return -1;
     }
 
 // Bade Condition

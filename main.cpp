@@ -1,4 +1,5 @@
 #include "Reverse.h"
+#include "Truckloads.h"
 #include <iostream>
 #include <string>
 
@@ -8,8 +9,14 @@ int main() {
 
 Reverse a;
 
-a.reverseDigit(123);
+cout << a.reverseDigit(123) << endl;
 
 cout << a.reverseString("a") << endl;
 
+Truckloads b;
+
+cout << b.numTrucks(10 , 2) << endl;
+
 }
+
+
