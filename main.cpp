@@ -18,7 +18,7 @@ Truckloads b;
 
 cout << b.numTrucks(10 , 2) << endl;
 
-EfficentTruckloads c;
+EfficientTruckloads c;
 
 cout << c.numTrucks(10,2) << endl;
 
