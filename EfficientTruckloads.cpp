@@ -1,7 +1,7 @@
 #include "EfficientTruckloads.h"
 #include <iostream>
 
-#define MaxCrates 100000
+#define MaxCrates 10000
 #define MaxLoad 1000
 
 #include <array>

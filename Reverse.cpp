@@ -16,12 +16,12 @@ int Reverse::reverseDigit(int value) {
         return -1;
     }
 
-// Bade Condition
+// Base Condition
     if(value < 10) {
         return value;
     }
 
-// Recersion
+// Recursion
 
     return pow(10 , (floor(log10(value) + 1)) - 1)*(value%10) + reverseDigit(value/10);
 
@@ -35,7 +35,7 @@ string Reverse::reverseString(string letters) {
             return letters;
         }
 
-    // Recersoion
+    // Recursion
 
     return letters.at(letters.size() - 1) + reverseString(letters.substr(0, letters.size() - 1));
 }
