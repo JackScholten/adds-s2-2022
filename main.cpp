@@ -8,6 +8,7 @@
 #include "FilterForTwoDigitPositive.h"
 #include "ReduceGeneric.h"
 #include "ReduceMinimum.h"
+#include "ReduceGCD.h"
 
 #include <iostream>
 
@@ -22,13 +23,26 @@ void PrintArray(vector<int> input) {
 
 int main() {
 
-    vector<int> input {14, 1, 323, 24};
-    vector<int> bet {14, 2, 323, 24};
+    MapTriple a;
+    MapAbsoluteValue b; 
 
-    ReduceMinimum a;
+    FilterOdd c;
+    FilterForTwoDigitPositive d;
 
-    cout << a.reduce(input) << endl;
-    cout << a.reduce(bet) << endl;
+    ReduceMinimum e;
+    ReduceGCD f;
+
+    vector<int> input {6, -11, 53, -16, 73, 128, 105, 104, -71, -179, 102, 12, 21, -145, -99, 199, -156, -186, 43, -189};
+    vector<int> result;
+
+    result = b.map(input);
+    result = a.map(result);
+
+    result = c.filter(result);
+    result = d.filter(result);
+
+    cout << e.reduce(result) << " " << f.reduce(result) << endl;
+   
 
     return 0;
 }
