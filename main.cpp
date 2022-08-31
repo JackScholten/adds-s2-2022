@@ -2,6 +2,12 @@
 #include "MapTriple.h"
 #include "MapSquare.h"
 #include "MapAbsoluteValue.h"
+#include "FilterGeneric.h"
+#include "FilterOdd.h"
+#include "FilterNonPositive.h"
+#include "FilterForTwoDigitPositive.h"
+#include "ReduceGeneric.h"
+#include "ReduceMinimum.h"
 
 #include <iostream>
 
@@ -16,20 +22,13 @@ void PrintArray(vector<int> input) {
 
 int main() {
 
-    vector<int> input {1, 2, 3, 4};
-    vector<int> yer {-1, 2, -3, 4};
+    vector<int> input {14, 1, 323, 24};
+    vector<int> bet {14, 2, 323, 24};
 
-    MapTriple a;
-    MapSquare b;
-    MapAbsoluteValue c;
+    ReduceMinimum a;
 
-    PrintArray(a.map(input));
-    cout << "NEXT" << endl;
-    PrintArray(b.map(input));
-    cout << "NEXT" << endl;
-    PrintArray(c.map(yer));
-
-
+    cout << a.reduce(input) << endl;
+    cout << a.reduce(bet) << endl;
 
     return 0;
 }
