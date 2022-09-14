@@ -5,8 +5,6 @@ using namespace std;
 
 int ReduceGeneric::reduce(vector<int> input) {
 
-    
-
     //Base Case
         if(input.size() == 1) {
             return input.at(0);
