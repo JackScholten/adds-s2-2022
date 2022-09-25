@@ -1,4 +1,5 @@
 #include "Individual.h"
+#include "Mutator.h"
 
 #include <string>
 
@@ -71,3 +72,5 @@ int Individual::getLength() {
 }
 
 void Individual::setString(std::string DNA) { this->binaryString = DNA; }
+
+Mutator::Mutator(){};
