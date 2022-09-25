@@ -2,15 +2,17 @@
 
 using namespace std;
 
-Individual BitFlip::mutate(Individual person, int k) {
+BitFlip::BitFlip() {};
 
-while( k > person.getLength() ) {
+Individual * BitFlip::mutate(Individual * person, int k) {
 
-    k = k%10;
+while( k > person->getLength() ) {
+
+    k = k - person->getLength();
 
 }
 
-person.flipBit(k);
+person->flipBit(k-1);
 
 return person;
 

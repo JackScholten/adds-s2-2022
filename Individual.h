@@ -8,6 +8,8 @@ class Individual {
         std::string binaryString;
 
     public:
+        Individual() {}
+
         Individual(int length); 
         Individual(std::string _binaryString); 
 
@@ -18,6 +20,8 @@ class Individual {
         int getMaxOnes();
         int getLength(); 
 
+
+        void setString(std::string DNA);
 
 
 };

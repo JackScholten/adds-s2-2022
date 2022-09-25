@@ -12,7 +12,7 @@ class BitFlipProb : public Mutator {
         BitFlipProb();
         BitFlipProb(double _p);
 
-        virtual Individual mutate(Individual person, int k);
+        virtual Individual * mutate(Individual * person);
 
 
 };

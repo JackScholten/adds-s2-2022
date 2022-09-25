@@ -1,11 +1,11 @@
-#ifndef _BitFlip
-#define _BitFlip
+#ifndef _Rearrange
+#define _Rearrange
 
 #include "Mutator.h"
 
-class BitFlip : public Mutator {
+class Rearrange : public Mutator {
     public:
-        BitFlip();
+        Rearrange();
 
         virtual Individual * mutate(Individual * person, int k);
 

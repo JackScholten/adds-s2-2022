@@ -66,8 +66,8 @@ void Individual::flipBit(int pos) {
 
 int Individual::getMaxOnes() {
 
-    int currentStreak;
-    int maxStreak;
+    int currentStreak = 0;
+    int maxStreak = 0;
 
     for(int i=0; i < this->binaryString.length(); i++) {
 
@@ -101,3 +101,6 @@ return this->binaryString.length();
 
 
 }
+
+
+void Individual::setString(std::string DNA) { this->binaryString = DNA; }
