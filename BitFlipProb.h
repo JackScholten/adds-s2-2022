@@ -10,7 +10,7 @@ class BitFlipProb : public Mutator {
    public:
     BitFlipProb(double _p);
 
-    virtual Individual* mutate(Individual* person);
+    virtual Individual* mutate(Individual* person, int k) override;
 };
 
 #endif
