@@ -17,16 +17,13 @@ return mPtr->mutate(indPtr, k);
 int main() {
 
 string binarystr1;
-cin >> binarystr1;
-
 int k1;
-cin >> k1;
-
 string binarystr2;
-cin >> binarystr2;
-
 int k2;
-cin >> k2;
+
+cin >> binarystr1 >> k1 >> binarystr2 >> k2;
+
+
 
 Individual *One = new Individual(binarystr1);
 Individual *Two = new Individual(binarystr2);
