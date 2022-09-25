@@ -2,18 +2,14 @@
 
 using namespace std;
 
-BitFlip::BitFlip() {};
+BitFlip::BitFlip(){};
 
-Individual * BitFlip::mutate(Individual * person, int k) {
+Individual* BitFlip::mutate(Individual* person, int k) {
+    while (k > person->getLength()) {
+        k = k - person->getLength();
+    }
 
-while( k > person->getLength() ) {
+    person->flipBit(k - 1);
 
-    k = k - person->getLength();
-
-}
-
-person->flipBit(k-1);
-
-return person;
-
+    return person;
 }

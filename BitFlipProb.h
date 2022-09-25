@@ -4,17 +4,14 @@
 #include "Mutator.h"
 
 class BitFlipProb : public Mutator {
-    private:
-
+   private:
     double p;
-    
-    public:
-        BitFlipProb();
-        BitFlipProb(double _p);
 
-        virtual Individual * mutate(Individual * person);
+   public:
+    BitFlipProb();
+    BitFlipProb(double _p);
 
-
+    virtual Individual* mutate(Individual* person);
 };
 
 #endif

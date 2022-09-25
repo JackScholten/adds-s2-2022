@@ -4,12 +4,10 @@
 #include "Mutator.h"
 
 class Rearrange : public Mutator {
-    public:
-        Rearrange();
+   public:
+    Rearrange();
 
-        virtual Individual * mutate(Individual * person, int k);
-
-
+    virtual Individual* mutate(Individual* person, int k);
 };
 
 #endif
