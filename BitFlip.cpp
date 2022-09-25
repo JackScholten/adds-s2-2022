@@ -2,8 +2,6 @@
 
 using namespace std;
 
-BitFlip::BitFlip(){};
-
 Individual* BitFlip::mutate(Individual* person, int k) {
     while (k > person->getLength()) {
         k = k - person->getLength();

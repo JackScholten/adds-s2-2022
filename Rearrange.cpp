@@ -2,8 +2,6 @@
 
 using namespace std;
 
-Rearrange::Rearrange(){};
-
 Individual* Rearrange::mutate(Individual* person, int k) {
     while (k > person->getLength()) {
         k = k - person->getLength();
