@@ -35,18 +35,3 @@ int main() {
     return 0;
 }
 
-// int main() {
-
-// string binarystr1 = "abcde";
-// int k1 = 7;
-
-// Individual *One = new Individual(binarystr1);
-
-// auto *RearrangePtr = new Rearrange();
-
-// One = execute(One, RearrangePtr, k1);
-
-// cout << One->getString() << endl;
-
-//     return 0;
-// }
