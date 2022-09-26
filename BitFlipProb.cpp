@@ -11,7 +11,7 @@ Individual* BitFlipProb::mutate(Individual* person, int k) {
     srand((unsigned)time(NULL));
 
     for (int i = 0; i < person->getLength(); i++) {
-        if (this->p < (double)rand() / RAND_MAX) {
+        if (this->p > (double)rand() / RAND_MAX) {
             person->flipBit(i);
         }
     }
