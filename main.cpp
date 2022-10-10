@@ -22,12 +22,12 @@ int main() {
 
     vector<int> list{2, 4, 2, 5, 8 , 6 , 3 , 4 , 6 , -1};
 
-    BubbleSort Jack;
-    RecursiveBinarySearch Julian;
+    QuickSort Jack;
+    //RecursiveBinarySearch Julian;
 
     print(Jack.sort(list));
 
-    cout << Julian.search(Jack.sort(list), 100) << endl;
+    //cout << Julian.search(Jack.sort(list), 100) << endl;
 
     return 0;
 }
