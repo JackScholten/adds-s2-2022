@@ -5,7 +5,7 @@ using namespace std;
 bool RecursiveBinarySearch::search(std::vector<int> list, int goal) {
 
 
-return Helper(list, goal, list.front(), list.back());
+return Helper(list, goal, 0, list.size());
 
 }
 

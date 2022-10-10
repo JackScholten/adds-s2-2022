@@ -5,9 +5,6 @@
 #include <vector>
 
 class QuickSort : public Sort {
-        private:
-        std::vector<int> NList;
-        
         public:
             QuickSort() {};
 

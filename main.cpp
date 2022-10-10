@@ -20,14 +20,15 @@ void print(vector<int> list) {
 
 int main() {
 
-    vector<int> list{2, 4, 2, 5, 8 , 6 , 3 , 4 , 6 , -1};
+    vector<int> list{1, 3, 5, 4, -5 , 100 , 7777 , 2014};
 
     QuickSort Jack;
-    //RecursiveBinarySearch Julian;
+    RecursiveBinarySearch Julian;
 
-    print(Jack.sort(list));
+    list = Jack.sort(list);
 
-    //cout << Julian.search(Jack.sort(list), 100) << endl;
+    cout << boolalpha << Julian.search(list, 1) << " ";
+    print(list);
 
     return 0;
 }
