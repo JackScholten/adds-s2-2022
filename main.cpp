@@ -20,7 +20,15 @@ void print(vector<int> list) {
 
 int main() {
 
-    vector<int> list{1, 3, 5, 4, -5 , 100 , 7777 , 2014};
+    int input;
+    vector<int> list;
+    int n;
+    cin >> n;
+    
+    for(int i = 0; i<n; i++) {
+        cin >> input;
+        list.push_back(input);
+    }
 
     QuickSort Jack;
     RecursiveBinarySearch Julian;
