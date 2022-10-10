@@ -22,11 +22,8 @@ int main() {
 
     int input;
     vector<int> list;
-    int n;
-    cin >> n;
     
-    for(int i = 0; i<n; i++) {
-        cin >> input;
+    while(cin >> input) {
         list.push_back(input);
     }
 
