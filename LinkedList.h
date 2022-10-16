@@ -1,27 +1,32 @@
-#ifndef _LinkList
-#define _LinkList
+#ifndef _LinkedList
+#define _LinkedList
 
 #include "Node.h"
 
-class LinkList {
+class LinkedList {
     private:
         Node* head;
 
     public:
-        LinkList();
-        LinkList(int array[], int size);
+        LinkedList();
+        LinkedList(int array[], int size);
         
         void addFront(int newItem);
         void addEnd(int newItem);
         void addAtPosition(int position, int newItem);
+
         int search(int item);
+
         void deleteFront();
         void deleteEnd();
         void deletePosition(int position);
+
         int getItem(int position);
         void printItems();
 
+        Node* getPosition(int position);
 
+        ~LinkedList();
 
 };
 
