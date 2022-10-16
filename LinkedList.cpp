@@ -8,6 +8,20 @@ using namespace std;
 
 LinkedList::LinkedList() { this->head = new Node(); }
 
+LinkedList::LinkedList(int array[], int size) {
+
+    head = new Node();
+
+    head->setData(array[0]);
+
+    for(int i = 1; i<size; i++) {
+
+        addEnd(array[i]);
+
+    }
+
+}
+
 Node *LinkedList::getPosition(int position) {
     Node *temp = head;
 
