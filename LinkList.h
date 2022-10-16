@@ -9,7 +9,7 @@ class LinkList {
 
     public:
         LinkList();
-        //LinkList(array, sizeofarray);
+        LinkList(int array[], int size);
         
         void addFront(int newItem);
         void addEnd(int newItem);
