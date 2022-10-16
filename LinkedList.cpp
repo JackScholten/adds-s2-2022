@@ -54,7 +54,7 @@ void LinkedList::addEnd(int newItem) {
 
 void LinkedList::addAtPosition(int position, int newItem) {
     Node *newNode = new Node();
-    Node *previous = getPosition(position);
+    Node *previous = getPosition(position-1);
 
     newNode->setData(newItem);
     newNode->setNext(previous->getNext());
