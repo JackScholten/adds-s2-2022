@@ -38,12 +38,14 @@ int answer = getAnswer(queue, stack);
 cout << "(" << queue.front();
 queue.pop();
 
-while(stack.size() != 0) {
+while(stack.size() != 1) {
 
     cout << " " << stack.top() << " " << queue.front() << ")"; 
     queue.pop();
     stack.pop();
 }
+
+cout << " " << stack.top() << " " << queue.front();
 
 cout << " = " << answer << endl;
 
