@@ -2,6 +2,7 @@
 #include <stack>
 #include <queue>
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -13,13 +14,13 @@ int first;
 int second;
 
 while(stack.size() != 0) {
-first = queue.front();
-queue.pop();
-second = queue.front();
-queue.pop();
+    first = queue.front();
+    queue.pop();
+    second = queue.front();
+    queue.pop();
 
-queue.push(operation(first, second, stack.top()));
-stack.pop();
+    queue.push(operation(first, second, stack.top()));
+    stack.pop();
 
 }
 
@@ -28,7 +29,25 @@ return queue.front();
 
 void Convert::printEq(std::queue<int> queue, stack<string> stack) {
 
+if((queue.size() - stack.size()) != 1) {
+    cout << "Error" << endl;
+} else {
 
+int answer = getAnswer(queue, stack);
+
+cout << "(" << queue.front();
+queue.pop();
+
+while(stack.size() != 0) {
+
+    cout << " " << stack.top() << " " << queue.front() << ")"; 
+    queue.pop();
+    stack.pop();
+}
+
+cout << " = " << answer << endl;
+
+}
 
 }
 
@@ -45,4 +64,5 @@ switch(opp.at(0)) {
         return first*second;
 }
 
+return 0;
 }

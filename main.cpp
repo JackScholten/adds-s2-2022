@@ -57,12 +57,9 @@ int main() {
         }
     }
 
-    printStack(operators);
-    printQueue(numbers);
-
     Convert Jack;
 
-    cout << Jack.getAnswer(numbers, operators) << endl;
+    Jack.printEq(numbers, operators);
 
     return 0;
 }
