@@ -41,7 +41,7 @@ int second;
     queue.pop();
 
 if(stack.size() == 1) {
-    cout << first << " " << stack.top() << " " << second;
+    cout << "(" << first << " " << stack.top() << " " << second << ")";
 
 } else {
     cout << "(" << first << " " << stack.top() << " " << second << ")";
