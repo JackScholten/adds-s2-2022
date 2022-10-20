@@ -50,7 +50,12 @@ if(stack.size() == 1) {
     cout << first << " " << stack.top() << " " << second;
 
 } else {
-    cout << "(" << first << " " << stack.top() << " " << second << ")";
+
+    for(int i = 1; i<stack.size(); i++) {
+        cout << "(";
+    }
+
+    cout << first << " " << stack.top() << " " << second << ")";
     stack.pop();
 
     while(stack.size() != 1) {
