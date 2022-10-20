@@ -63,7 +63,7 @@ int main() {
     } 
 
     if(numbers.size() == 1) {
-        cout << "Error" << endl;
+        cout << numbers.front() << " = " << numbers.front() << endl;
         return 0;
     }
 
