@@ -47,11 +47,13 @@ if(stack.size() == 1) {
     cout << "(" << first << " " << stack.top() << " " << second << ")";
     stack.pop();
 
-    while(stack.size() != 0) {
+    while(stack.size() != 1) {
         cout << " " << stack.top() << " " << queue.front() << ")";
         queue.pop();
         stack.pop();
     }
+
+    cout << " " << stack.top() << " " << queue.front();
 
 }
 
