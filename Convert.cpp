@@ -12,19 +12,25 @@ int Convert::getAnswer(queue<int> queue, stack<string> stack) {
 
 int first;
 int second;
+int answer;
 
-while(stack.size() != 0) {
     first = queue.front();
     queue.pop();
     second = queue.front();
     queue.pop();
 
-    queue.push(operation(first, second, stack.top()));
+while(stack.size() != 0) {
+
+    answer = operation(first, second, stack.top());
     stack.pop();
+
+    first = answer;
+    second = queue.front();
+    queue.pop();
 
 }
 
-return queue.front();
+return answer;
 }
 
 void Convert::printEq(std::queue<int> queue, stack<string> stack) {
@@ -41,7 +47,7 @@ int second;
     queue.pop();
 
 if(stack.size() == 1) {
-    cout << "(" << first << " " << stack.top() << " " << second << ")";
+    cout << first << " " << stack.top() << " " << second;
 
 } else {
     cout << "(" << first << " " << stack.top() << " " << second << ")";
