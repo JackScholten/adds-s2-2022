@@ -29,27 +29,33 @@ return queue.front();
 
 void Convert::printEq(std::queue<int> queue, stack<string> stack) {
 
-if((queue.size() - stack.size()) != 1) {
-    cout << "Error" << endl;
-} else {
-
 int answer = getAnswer(queue, stack);
 
-cout << "(" << queue.front();
-queue.pop();
 
-while(stack.size() != 1) {
+int first;
+int second;
 
-    cout << " " << stack.top() << " " << queue.front() << ")"; 
+    first = queue.front();
     queue.pop();
-    stack.pop();
-}
+    second = queue.front();
+    queue.pop();
 
-cout << " " << stack.top() << " " << queue.front();
+if(stack.size() == 1) {
+    cout << first << " " << stack.top() << " " << second;
+
+} else {
+    cout << "(" << first << " " << stack.top() << " " << second << ")";
+    stack.pop();
+
+    while(stack.size() != 0) {
+        cout << " " << stack.top() << " " << queue.front() << ")";
+        queue.pop();
+        stack.pop();
+    }
+
+}
 
 cout << " = " << answer << endl;
-
-}
 
 }
 

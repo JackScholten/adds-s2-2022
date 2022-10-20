@@ -57,6 +57,11 @@ int main() {
         }
     }
 
+    if((numbers.size() - operators.size()) != 1) {
+    cout << "Error" << endl;
+    return 0;
+    } 
+
     Convert Jack;
 
     Jack.printEq(numbers, operators);
