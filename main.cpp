@@ -42,6 +42,11 @@ int main() {
     istream_iterator<string> end;
     vector<string> vstrings(begin, end);
 
+    if(vstrings.empty()) {
+        cout << "Error" << endl;
+        return 0;
+    }
+
     if(vstrings.size() == 1 && is_number(vstrings.at(0))) {
 
         cout << vstrings.at(0) << " = " << vstrings.at(0) << endl;
