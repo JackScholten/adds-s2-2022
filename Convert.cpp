@@ -3,6 +3,7 @@
 #include <queue>
 #include <string>
 #include <iostream>
+#include <map>
 
 using namespace std;
 
@@ -43,8 +44,11 @@ void Convert::getAnswer(vector<string> input) {
             auto bottomstring = equation.top();
             equation.pop();
 
-            equation.push("(" + topstring + " " + input.at(i) + " " + bottomstring + ")");
-
+            if(input.at(i) == "*" || input.at(i) == "/") {
+                equation.push(topstring + " " + input.at(i) + " " + bottomstring);
+            } else {
+                equation.push("(" + topstring + " " + input.at(i) + " " + bottomstring + ")");
+            }
             
         }
     
