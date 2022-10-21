@@ -16,14 +16,15 @@ bool Convert::is_number(const string& s) {
 
 void Convert::getAnswer(vector<string> input) {
     stack<int> inputs;
+    stack<string> equation;
 
     int first;
     int second;
-    string equation = "";
 
     for(int i = input.size()-1; i>=0; i--) {
         
         if(is_number(input.at(i))) {
+            equation.push(input.at(i));
             inputs.push(stoi(input.at(i)));
         } else {
             if(inputs.size() < 2) {
@@ -37,21 +38,26 @@ void Convert::getAnswer(vector<string> input) {
 
             inputs.push(operation(first, second, input.at(i)));
 
-            if(i == 0) {
-                equation = (equation.empty() ? to_string(first) : equation) + " " + input.at(i) + " " + to_string(second);
-            } else {
+            auto topstring = equation.top();
+            equation.pop();
+            auto bottomstring = equation.top();
+            equation.pop();
 
-            equation = "(" + (equation.empty() ? to_string(first) : equation) + " " + input.at(i) + " " + to_string(second) + ")";
+            equation.push("(" + topstring + " " + input.at(i) + " " + bottomstring + ")");
 
-            }
             
         }
+    
         
         
     }
 
+    string result = equation.top();
+
+    result = result.substr(1, result.size() -2);
+
     if(inputs.size() == 1) {
-        cout << equation << " = " << inputs.top() << endl;
+        cout << result << " = " << inputs.top() << endl;
         return;
     } else {
         cout << "Error" << endl;
