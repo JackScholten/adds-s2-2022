@@ -58,7 +58,7 @@ void Convert::getAnswer(vector<string> input) {
 
     string result = equation.top();
 
-    result = result.substr(1, result.size() -2);
+    //result = result.substr(1, result.size() -2);
 
     if(inputs.size() == 1) {
         cout << result << " = " << inputs.top() << endl;
