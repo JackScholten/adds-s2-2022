@@ -4,15 +4,16 @@
 #include <stack>
 #include <queue>
 #include <string>
+#include <vector>
 
 class Convert {
     public:
         Convert();
 
-        int getAnswer(std::queue<int> queue, std::stack<std::string> stack);
-        void printEq(std::queue<int> queue, std::stack<std::string> stack);
+        void getAnswer(std::vector<std::string> input);
         int operation(int first, int second, std::string opp);
-        
+
+        bool is_number(const std::string& s);
 
 };
 

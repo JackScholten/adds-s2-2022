@@ -8,69 +8,58 @@ using namespace std;
 
 Convert::Convert() { };
 
-int Convert::getAnswer(queue<int> queue, stack<string> stack) {
-
-int first;
-int second;
-int answer;
-
-    first = queue.front();
-    queue.pop();
-    second = queue.front();
-    queue.pop();
-
-while(stack.size() != 0) {
-
-    answer = operation(first, second, stack.top());
-    stack.pop();
-
-    first = answer;
-    second = queue.front();
-    queue.pop();
-
+bool Convert::is_number(const string& s) {
+    string::const_iterator it = s.begin();
+    while (it != s.end() && isdigit(*it)) ++it;
+    return !s.empty() && it == s.end();
 }
 
-return answer;
-}
+void Convert::getAnswer(vector<string> input) {
+    stack<int> inputs;
 
-void Convert::printEq(std::queue<int> queue, stack<string> stack) {
+    int first;
+    int second;
+    string equation = "";
 
-int answer = getAnswer(queue, stack);
+    for(int i = input.size()-1; i>=0; i--) {
+        
+        if(is_number(input.at(i))) {
+            inputs.push(stoi(input.at(i)));
+        } else {
+            if(inputs.size() < 2) {
+                cout << "Error" << endl;
+                return;
+            }
+            first = inputs.top();
+            inputs.pop();
+            second = inputs.top();
+            inputs.pop();
 
+            inputs.push(operation(first, second, input.at(i)));
 
-int first;
-int second;
+            if(i == 0) {
+                equation = (equation.empty() ? to_string(first) : equation) + " " + input.at(i) + " " + to_string(second);
+            } else {
 
-    first = queue.front();
-    queue.pop();
-    second = queue.front();
-    queue.pop();
+            equation = "(" + (equation.empty() ? to_string(first) : equation) + " " + input.at(i) + " " + to_string(second) + ")";
 
-if(stack.size() == 1) {
-    cout << first << " " << stack.top() << " " << second;
-
-} else {
-
-    for(int i = 1; i<stack.size(); i++) {
-        cout << "(";
+            }
+            
+        }
+        
+        
     }
 
-    cout << first << " " << stack.top() << " " << second << ")";
-    stack.pop();
-
-    while(stack.size() != 1) {
-        cout << " " << stack.top() << " " << queue.front() << ")";
-        queue.pop();
-        stack.pop();
+    if(inputs.size() == 1) {
+        cout << equation << " = " << inputs.top() << endl;
+        return;
+    } else {
+        cout << "Error" << endl;
+        return;
     }
-
-    cout << " " << stack.top() << " " << queue.front();
-
+    
 }
 
-cout << " = " << answer << endl;
-
-}
 
 int Convert::operation(int first, int second, string opp) {
 
@@ -86,4 +75,6 @@ switch(opp.at(0)) {
 }
 
 return 0;
+
+
 }

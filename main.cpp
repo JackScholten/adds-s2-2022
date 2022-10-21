@@ -15,10 +15,6 @@ bool is_number(const string& s) {
     return !s.empty() && it == s.end();
 }
 
-bool is_operation(string s) {
-    return s == "+" || s == "-" || s == "*" || s == "/";
-}
-
 void printStack(stack<string> operators) {
 
     while (!operators.empty()) {
@@ -46,30 +42,16 @@ int main() {
     istream_iterator<string> end;
     vector<string> vstrings(begin, end);
 
-    stack<string> operators;
-    queue<int> numbers;
+    if(vstrings.size() == 1 && is_number(vstrings.at(0))) {
 
-    for (string s : vstrings) {
-        if (is_number(s)) {
-            numbers.push(stoi(s));
-        } else if (is_operation(s)) {
-            operators.push(s);
-        }
-    }
-
-    if((numbers.size() - operators.size()) != 1) {
-        cout << "Error" << endl;
-        return 0;
-    } 
-
-    if(numbers.size() == 1) {
-        cout << numbers.front() << " = " << numbers.front() << endl;
+        cout << vstrings.at(0) << " = " << vstrings.at(0) << endl;
         return 0;
     }
 
     Convert Jack;
 
-    Jack.printEq(numbers, operators);
+    Jack.getAnswer(vstrings);
+
 
     return 0;
 }
